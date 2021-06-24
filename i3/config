@@ -12,7 +12,7 @@
 set $mod Mod4
 
 #
-exec --no-startup-id BACKGROUND="/home/jadno/Downloads/ZgotuLp.png"
+# exec --no-startup-id BACKGROUND="/home/jadno/Downloads/ZgotuLp.png"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -37,7 +37,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id picom --config /home/jadno/.config/picom.conf --experimental-backends
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale $BACKGROUND
+exec --no-startup-id feh --bg-scale "/home/jadno/Downloads/ZgotuLp.png"
+
+# Google Drive mount
+exec --no-startup-id rclone mount --vfs-cache-mode full --daemon driveusp: /home/jadno/driveusp
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -272,8 +275,9 @@ mode "$mode_gaps_outer" {
 # finds out, if available)
 bar {
 	status_command ~/bumblebee-status/bumblebee-status -m amixer cpu disk \
-		nic ping speedtest memory datetime \
+  ping speedtest memory datetime \
 		-p nic.exclude='wlp3s0' \
+    datetime.format="%d/%m/%Y %H:%M:%S" \
 		-t night-powerline
 	position top
 	height 36
