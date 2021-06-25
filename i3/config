@@ -34,7 +34,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Transparency
-exec --no-startup-id picom --config /home/jadno/.config/picom.conf --experimental-backends
+
+exec --no-startup-id picom --backend glx --experimental-backends -bc
+#exec --no-startup-id picom --config /home/jadno/.config/picom.conf --experimental-backends
 
 # Wallpaper
 exec --no-startup-id feh --bg-scale "/home/jadno/Downloads/ZgotuLp.png"
@@ -53,7 +55,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec "/usr/bin/kitty"
 
 # kill focused window
 bindsym $mod+Shift+q kill

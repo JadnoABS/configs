@@ -31,11 +31,12 @@ set autoindent " Auto identation
 set ic " Ignore lower and uppercase on search
 set mouse=a
 set inccommand=split
-set ts=4
-set sw=4
-set tw=0
+set tabstop=2
+set shiftwidth=2
+set textwidth=0
+set smartindent
 set cindent
-set noexpandtab
+set expandtab
 set smarttab
 set scrolloff=3
 set wrap
