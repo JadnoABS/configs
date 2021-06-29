@@ -5,6 +5,8 @@
   - `yay -S neovim`
 - i3 window manager
   - `yay -S i3-gaps feh dmenu i3status`
+  - `pip install --user bumblebee-status`
+  - Install each one of bumblebee modules dependencies
 - Picom (for window transparency)
   - `yay -S picom-tryone-git`
 - Kitty (terminal emulator)
