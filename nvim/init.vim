@@ -24,6 +24,7 @@ call plug#end()
 colorscheme gruvbox
 
 " Basic configuration
+set clipboard+=unnamedplus
 set hidden
 set number " Line numbers
 set relativenumber
