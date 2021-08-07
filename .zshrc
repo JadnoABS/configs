@@ -80,7 +80,6 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   zsh-autosuggestions
-  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,3 +115,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /home/jadno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #bindkey -v
+source /home/jadno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export EDITOR=nvim

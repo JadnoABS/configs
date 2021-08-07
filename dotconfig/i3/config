@@ -25,6 +25,8 @@ font pango:DejaVu Sans Mono 8
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
+exec --no-startup-id amixer set 'Capture' 50%
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -39,10 +41,10 @@ exec --no-startup-id picom --backend glx --experimental-backends -bc
 #exec --no-startup-id picom --config /home/jadno/.config/picom.conf --experimental-backends
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale "/home/jadno/Downloads/ZgotuLp.png"
+exec --no-startup-id feh --bg-scale "/home/jadno/Downloads/wallpaper3.jpg"
 
 # Google Drive mount
-exec --no-startup-id rclone mount --vfs-cache-mode full --daemon driveusp: /home/jadno/driveusp
+#exec --no-startup-id rclone mount --vfs-cache-mode full --daemon driveusp: /home/jadno/driveusp
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -220,7 +222,7 @@ for_window [class="^.*"] border pixel 2
 
 # Set inner/outer gaps
 gaps inner 10
-gaps outer 15
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -275,9 +277,10 @@ mode "$mode_gaps_outer" {
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+# Caso esteja em uma tela maior, ping e speedtest sao boas opcoes tbm
 bar {
-	status_command ~/bumblebee-status/bumblebee-status -m amixer cpu disk \
-  ping speedtest memory datetime \
+	status_command ~/bumblebee-status/bumblebee-status -m amixer cpu battery\
+  disk memory datetime \
 		-p nic.exclude='wlp3s0' \
     datetime.format="%d/%m/%Y %H:%M:%S" \
 		-t night-powerline
