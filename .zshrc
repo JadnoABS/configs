@@ -118,3 +118,6 @@ source /home/jadno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/jadno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export EDITOR=nvim
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+setxkbmap -layout us -variant alt-intl

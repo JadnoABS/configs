@@ -41,7 +41,7 @@ exec --no-startup-id picom --backend glx --experimental-backends -bc
 #exec --no-startup-id picom --config /home/jadno/.config/picom.conf --experimental-backends
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale "/home/jadno/Downloads/wallpaper3.jpg"
+exec --no-startup-id feh --bg-scale "/home/jadno/Downloads/wallpaper2.gif"
 
 # Google Drive mount
 #exec --no-startup-id rclone mount --vfs-cache-mode full --daemon driveusp: /home/jadno/driveusp

@@ -23,10 +23,14 @@ Plug 'alvan/vim-closetag'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " colorscheme onehalfdark
 colorscheme gruvbox
+
+
+lua require("plugin-config")
 
 " Basic configuration
 set clipboard+=unnamedplus

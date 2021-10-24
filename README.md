@@ -1,8 +1,9 @@
 # My configuration files
 ## used by some of my day-to-day programs:
 
-- Neovim
+- Neovim/Lunarvim
   - `yay -S neovim`
+  - `yay -S lunarvim-git`
 - i3 window manager
   - `yay -S i3-gaps feh dmenu i3status`
   - `pip install --user bumblebee-status`
